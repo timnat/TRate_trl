@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#FOLDER_PATH="your_path/TRate_trl"
+FOLDER_PATH="your_path/TRate_trl"
 #TRate_trl version 1
 
 # Bedtools should be installed in your Path!
@@ -19,8 +19,6 @@
 #      Read length - read length (for single end libraries) and doubled read length for paired end libraries (e.g. 300 for paired end reads of length 150)
 # This program computes outputs "rate" of each transcript in exons file. Rate is computed as total mass of exons within the transcript divided by total length of these exons, mass is taken as approximation of the area under coverage curve, i.e. sum of areas of coverage rectangles.  
  
-#$1 EXONS_by_transcripts.sbed
-#$2 SRR2885267.sam.bam.norm0.036762.bg.s
 Exons_file=$1
 Cov_file=$2
 L=$3
