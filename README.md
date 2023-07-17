@@ -7,20 +7,23 @@ The _TRate_trl_ program takes in three arguments in fixed order.
 
 Exons_file format example
 
-     C0000570	10420	10640	Transcript1
-     C0000570	128078	128167	Transcript2
-     C0000570	128290	128405	Transcript2
-     C0000571	72845	73133	Transcript3
-     C0000571	73211	73274	Transcript3
+	C0000570	10420	10640	Transcript1
+	C0000570	128078	128300	Transcript2
+	C0000570	128350	128410	Transcript2
+	C0000571	12845	13133	Transcript3
+	C0000571	13211	13274	Transcript3
+	C0000571	33100	33200	Transcript4
+	C0000571	33440	33500	Transcript4
 
 2. Coverage_file - coordinate sorted file in bedgraph format - it can contain coverage data (usually normalized) from RNAseq study, ChIPseq, ATACseq and so on.
 
 Coverage_file format example
 
-     C0000570	10481	10549	0.310587
-     C0000570	10579	10610	0.41057
-     C0000570	128288	128293	1.105
-
+	C0000570	128417	128420	1.021174
+	C0000570	128420	128452	1.010587
+	C0000571	33336	33436	5.021174
+	C0000571	33437	33450	5.1234
+ 
 3. Read length (for single end libraries) and doubled read length for paired end libraries (e.g. 300 for paired end reads of length 150)
 
 ## _USAGE_
@@ -48,12 +51,11 @@ Output will be in a file Coverage_file.rate_trl
 
 Output format
 
-     Transcript1	0.341895
-     Transcript2	1.98961
-     Transcript3	0
+	Transcript1	0.769264
+	Transcript2	2.29329
+	Transcript3	0
+	Transcript4	1.60106
 
 Transcript rate = 0 if no coverage data were found for this transcript.
-     
-
 
  
