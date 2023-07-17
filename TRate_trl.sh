@@ -1,8 +1,7 @@
 #!/bin/bash
 
 #FOLDER_PATH="your_path/TRate_trl"
-FOLDER_PATH="/home/newnataliya/From_timnatuk/APPS/APPS_NT/TRate_trl"
-#TRate_rl version 1
+#TRate_trl version 1
 
 # Bedtools should be installed in your Path!
 
