@@ -1,7 +1,7 @@
-# _TRate_rl_
-The _TRate_rl_ program computes "rate" of each transcript according to given coverage file. Transcripts are coded by coordinates of their exons (bed file for now, gtf/gff in future). Rate is computed as total _mass_ of exons within the transcript divided by 2X of read length (similar to ...). _Mass_ is taken as approximation of the area under coverage curve, i.e. sum of areas of coverage rectangles.
+# _TRate_trl_
+The _TRate_trl_ program computes "rate" of each transcript according to given coverage file. Transcripts are coded by coordinates of their exons (bed file for now, gtf/gff in future). Rate is computed as total _mass_ of exons within the transcript divided by D = 2*read_length*transcript_length/1000. _Mass_ is taken as approximation of the area under coverage curve, i.e. sum of areas of coverage rectangles. The _transcript_length_ is diefined as sum of exon's lengths.
 
-The _TRate_ program takes in three arguments in fixed order.
+The _TRate_trl_ program takes in three arguments in fixed order.
 
 1. Exons_file - coordinate sorted bed file that provides locations of exons for the corresponding transcript provided in column 4.
 
@@ -30,21 +30,21 @@ Coverage_file format example
     g++
 	
 ### Installation
-Download TRate_rl
+Download TRate_trl
 
-cd TRate_rl
+cd TRate_trl
 
 make		
 
-In file TRate_rl.sh edit path to TRate_rl folder, e.g.
+In file TRate_trl.sh edit path to TRate_trl folder, e.g.
 
-FOLDER_PATH="your/path/TRate_rl"
+FOLDER_PATH="your/path/TRate_trl"
 
-### Run TRate on test data
+### Run TRate_trl on test data
 
-     ./TRate_rl.sh ./data/Exons_file.sbed ./data/Coverage_file.bg 300
+     ./TRate_trl.sh ./data/Exons_file.sbed ./data/Coverage_file.bg 300
 
-Output will be in a file Coverage_file.rate_rl 
+Output will be in a file Coverage_file.rate_trl 
 
 Output format
 
