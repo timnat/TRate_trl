@@ -53,6 +53,6 @@ $FOLDER_PATH/TR_trl $Name1".rat" $L > $Name1".rate_trl.log"
 
 echo "File $Cov_file processed, result is in "$Name1".rate_trl"
 echo "Removing intermediate files";
-#rm $Name1".rat"
+rm $Name1".rat"
 
 
